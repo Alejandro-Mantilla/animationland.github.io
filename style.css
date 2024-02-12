@@ -1,0 +1,318 @@
+:root {
+    --dark-brown: #a54a38;
+    --light-brown: #bf624c;
+    --green: #51af5e;
+    --shadow: 0 19px 38px rgba(0,0,0,0.30),
+              0 15px 12px rgba(0,0,0,0.22);
+  }
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  
+    counter-reset: score;
+  }
+  .phone {
+    position: relative;
+    border-radius: 6vmin;
+    height: 87vmin;
+    width: 44vmin;
+    overflow: hidden;
+    background-color: #CCEFFF;
+    border: 1vmin solid black;
+    box-shadow: var(--shadow);
+  }
+  .layer {
+    position: absolute;
+    bottom: 0;
+  }
+  .bonny{
+    animation-name: layer;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .layer-1 {
+    height: 80%;
+    position: absolute;
+    right: 18%;
+    width: 25%;
+    z-index: 1;
+    animation-duration: 1s;
+  }
+  .layer-2 {
+    height: 80%;
+    position: absolute;
+    left: 18%;
+    width: 25%;
+    z-index: 2;
+    animation-duration: 1.2s;
+  }
+  .layer-3 {
+    height: 68%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 76%;
+    z-index: 3;
+  }
+  .layer-4 {
+    height: 60%;
+    left: 5%;
+    width: 25%;
+    z-index: 4;
+    animation-duration: .8s;
+    animation-timing-function: ease-in;
+  }
+  .layer-5 {
+    height: 48%;
+    width: 70%;
+    z-index: 5;
+  }
+  .layer-6 {
+    height: 42%;
+    right: 8%;
+    width: 25%;
+    z-index: 6;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+  }
+  .layer-7 {
+    right: 0;
+    height: 32%;
+    width: 52%;
+    z-index: 7;
+  }
+  .layer-8 {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    width: 68%;
+    margin: 0 auto;
+    z-index: 8;
+  }
+  .layer-8__center-lawn,
+  .layer-8__left-lawn,
+  .layer-8__right-lawn {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--green);
+    width: 40%;
+    border-radius: 40px 40px 0 0;
+  }
+  .layer-8__center-lawn {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .layer-8__left-lawn {
+    height: 70%;
+  }
+  
+  .layer-8__right-lawn {
+    right: 0;
+    height: 80%;
+  }
+  .layer-9 {
+    bottom: 0;
+    height: 17%;
+    width: 41%;
+    z-index: 9;
+  }
+  .layer-10 {
+    right: 0;
+    height: 17%;
+    width: 41%;
+    z-index: 10;
+  }
+  .layer-9__left-cloud,
+  .layer-9__right-cloud,
+  .layer-10__left-cloud,
+  .layer-10__right-cloud {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+  }
+  .layer-9__left-cloud,
+  .layer-10__right-cloud {
+    height: 100%;
+    width: 65%;
+  }
+  .layer-9__right-cloud,
+  .layer-10__left-cloud {
+    height: 60%;
+    width: 50%;
+  }
+  .layer-9__left-cloud {
+    border-radius: 40px 40px 0 0;
+  }
+  .layer-9__right-cloud {
+    right: 0;
+    border-radius: 0 40px 30px 0;
+  }
+  .layer-10__left-cloud {
+    border-radius: 40px 0 0 30px;
+  }
+  .layer-10__right-cloud {
+    right: 0;
+    border-radius: 40px 40px 0 0;
+  }
+  .ear--outer,
+  .ear--inner {
+    border-radius: 90%;
+    position: absolute;
+  }
+  .ear--outer {
+    background-color: white;
+    width: 32%;
+    height: 12%;
+    min-height: 35px;
+  }
+  .ear--inner {
+     background-color: pink; 
+    width: 15%;
+    height: 8%;
+    min-height: 20px;
+    top: 4%;
+  }
+  .left-ear--outer {
+    left: 10%;
+  }
+  .left-ear--inner {
+    left: 20%;
+  }
+  .right-ear--outer {
+    right: 10%;
+  }
+  .right-ear--inner {
+    right: 20%; 
+  }
+  .head {
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 15%;
+    min-height: 50px;
+    border-radius: 50%;
+  }
+  .head__eye {
+    background-color: gray;
+    position: absolute;
+    top: 25%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .head__eye--left {
+    left: 32%;
+  }
+  .head__eye--right {
+    right: 32%;
+  }
+  .layer-4 .ear--outer {
+    height: 50px;
+  }
+  .layer-4 .ear--inner {
+    top: 15px;
+    height: 35px;
+  }
+  .layer-4 .head {
+    top: 40px;
+  }
+  .layer-6 .ear--outer {
+    height: 45px;
+  }
+  .layer-6 .ear--inner {
+    top: 15px;
+    height: 30px;
+  }
+  .layer-6 .head {
+    top: 35px;
+  }
+  .mound {
+    border-radius: 3vmin;
+    margin: auto;
+    overflow: hidden;
+    background-color: var(--light-brown);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
+  }
+  .lawn {
+    height: 20px;
+    background-color: var(--green);
+  }
+  .land {
+    height: 30px;
+    background-color: var(--dark-brown);
+    background-image: linear-gradient(135deg, var(--green) 25%, transparent 25%),
+        linear-gradient(225deg, var(--green) 25%, transparent 25%),
+        linear-gradient(45deg, var(--light-brown) 25%, transparent 25%),
+        linear-gradient(315deg, var(--light-brown) 25%, var(--dark-brown) 25%);
+    background-position: 15px 0, 15px 0, 0 0, 0 0;
+    background-size: 33px 30px;
+    background-repeat: repeat;
+  }
+  input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 80px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
+  }
+  input:checked {
+    counter-increment: score;
+  }
+  .score::after {
+    content: counter(score);
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 28px 0 10px;
+  }
+  .title img {
+    width: 70%;
+  }
+  .score {
+    color: var(--light-brown);
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  @keyframes blink {
+    0% {
+      transform: scaleY(1);
+    }
+    5% {
+      transform: scaleY(.2) translateY(2px); 
+    }
+    10% {
+      transform: scaleY(1);   
+    }
+  }
+  
+  @keyframes layer {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
